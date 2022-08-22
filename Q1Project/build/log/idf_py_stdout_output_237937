@@ -1,0 +1,66 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/darky/Desktop/RTOS_EXAM_PUSH_0017/Q1Project/build/bootloader/esp-idf/esptool_py && /home/darky/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/darky/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/darky/Desktop/RTOS_EXAM_PUSH_0017/Q1Project/build/bootloader/bootloader.bin
+Bootloader binary size 0x66c0 bytes. 0x940 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/Q1.c.obj
+../main/Q1.c: In function 'task_1':
+../main/Q1.c:15:34: warning: passing argument 1 of 'uxTaskPriorityGet' from incompatible pointer type [-Wincompatible-pointer-types]
+   15 |     priority = uxTaskPriorityGet(task_1);
+      |                                  ^~~~~~
+      |                                  |
+      |                                  void (*)(void *)
+In file included from ../main/Q1.c:4:
+/home/darky/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1130:51: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock * const'} but argument is of type 'void (*)(void *)'
+ 1130 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                ~~~~~~~~~~~~~~~~~~~^~~~~
+../main/Q1.c: In function 'task_2':
+../main/Q1.c:27:34: warning: passing argument 1 of 'uxTaskPriorityGet' from incompatible pointer type [-Wincompatible-pointer-types]
+   27 |     priority = uxTaskPriorityGet(task_2);
+      |                                  ^~~~~~
+      |                                  |
+      |                                  void (*)(void *)
+In file included from ../main/Q1.c:4:
+/home/darky/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1130:51: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock * const'} but argument is of type 'void (*)(void *)'
+ 1130 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                ~~~~~~~~~~~~~~~~~~~^~~~~
+../main/Q1.c: In function 'task_3':
+../main/Q1.c:39:34: warning: passing argument 1 of 'uxTaskPriorityGet' from incompatible pointer type [-Wincompatible-pointer-types]
+   39 |     priority = uxTaskPriorityGet(task_3);
+      |                                  ^~~~~~
+      |                                  |
+      |                                  void (*)(void *)
+In file included from ../main/Q1.c:4:
+/home/darky/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1130:51: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock * const'} but argument is of type 'void (*)(void *)'
+ 1130 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                ~~~~~~~~~~~~~~~~~~~^~~~~
+../main/Q1.c: In function 'task_4':
+../main/Q1.c:52:34: warning: passing argument 1 of 'uxTaskPriorityGet' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     priority = uxTaskPriorityGet(task_4);
+      |                                  ^~~~~~
+      |                                  |
+      |                                  void (*)(void *)
+In file included from ../main/Q1.c:4:
+/home/darky/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1130:51: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock * const'} but argument is of type 'void (*)(void *)'
+ 1130 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                ~~~~~~~~~~~~~~~~~~~^~~~~
+../main/Q1.c: In function 'task_5':
+../main/Q1.c:69:34: warning: passing argument 1 of 'uxTaskPriorityGet' from incompatible pointer type [-Wincompatible-pointer-types]
+   69 |     priority = uxTaskPriorityGet(task_5);
+      |                                  ^~~~~~
+      |                                  |
+      |                                  void (*)(void *)
+In file included from ../main/Q1.c:4:
+/home/darky/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1130:51: note: expected 'TaskHandle_t' {aka 'struct tskTaskControlBlock * const'} but argument is of type 'void (*)(void *)'
+ 1130 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                ~~~~~~~~~~~~~~~~~~~^~~~~
+[3/8] Linking C static library esp-idf/main/libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Building C object CMakeFiles/Q1Project.elf.dir/project_elf_src_esp32.c.obj
+[6/8] Linking CXX executable Q1Project.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.2.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/darky/Desktop/RTOS_EXAM_PUSH_0017/Q1Project/build/Q1Project.bin
+[8/8] cd /home/darky/Desktop/RTOS_EXAM_PUSH_0017/Q1Project/build/esp-idf/esptool_py && /home/darky/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/darky/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/darky/Desktop/RTOS_EXAM_PUSH_0017/Q1Project/build/partition_table/partition-table.bin /home/darky/Desktop/RTOS_EXAM_PUSH_0017/Q1Project/build/Q1Project.bin
+Q1Project.bin binary size 0x2b370 bytes. Smallest app partition is 0x100000 bytes. 0xd4c90 bytes (83%) free.
